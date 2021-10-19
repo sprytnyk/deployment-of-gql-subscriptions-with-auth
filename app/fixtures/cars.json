@@ -1,0 +1,22 @@
+[
+{
+    "model": "app.car",
+    "pk": 1,
+    "fields": {
+        "make": "Skoda",
+        "model": "Octavia",
+        "variant": "Scout",
+        "year": "2011"
+    }
+},
+{
+    "model": "app.car",
+    "pk": 2,
+    "fields": {
+        "make": "Skoda",
+        "model": "Octavia",
+        "variant": "Tour",
+        "year": "2007"
+    }
+}
+]
