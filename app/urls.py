@@ -18,8 +18,10 @@ urlpatterns = [
     ),
     path(
         'graphql/',
-        jwt_auth(
-            csrf_exempt(
+        # Make sure you understand this
+        # https://stackoverflow.com/a/60841115
+        csrf_exempt(
+            jwt_auth(
                 GraphQLView.as_view(
                     graphiql=True, backend=GraphQLCustomCoreBackend()
                 )

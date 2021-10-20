@@ -24,6 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'c)&3a#(bq8w7vhw^e+_8lrrpj4-#)6e^qfde)ya6de9vuj@@75'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# This enabled solely for testing purposes and verbosity of logs.
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
@@ -79,7 +80,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-
+# DB varibales shouldn't be exposed in production!
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -137,7 +138,7 @@ CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
         'CONFIG': {
-            'hosts': [('redis', 6379)],
+            'hosts': [('redis', 6379)],  # keep in in secret on prod
         }
     }
 }
@@ -164,7 +165,7 @@ SIMPLE_JWT = {
     'UPDATE_LAST_LOGIN': False,
 
     'ALGORITHM': 'HS256',
-    'SIGNING_KEY': SECRET_KEY,
+    'SIGNING_KEY': SECRET_KEY,  # keep it in secret on prod
     'VERIFYING_KEY': None,
     'AUDIENCE': None,
     'ISSUER': None,
