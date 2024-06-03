@@ -46,7 +46,7 @@ Assuming you installed all above requirements clone this repo and launch
 docker containers:
 
 ```sh
-$ git clone https://github.com/britonad/deployment-of-gql-subscriptions-with-auth.git
+$ git clone https://github.com/sprytnyk/deployment-of-gql-subscriptions-with-auth.git
 $ cd deployment-of-gql-subscriptions-with-auth
 $ docker-compose up --build -d
 ```
